@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import counterGenerator from './counter';
+import StateCounter from './stateCounter';
+import ShowChild from './showChild'
+
+const Counter1 = counterGenerator(1);
+const Counter2 = counterGenerator(2);
+const Counter3 = counterGenerator(3);
+const Counter4 = counterGenerator(4);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <ShowChild/> */}
+      {/* <Counter1 >
+        <Counter2>
+          <Counter3>
+            <Counter4 />
+          </Counter3>
+        </Counter2>
+      </Counter1> */}
+      {/* <Counter1/> */}
+      <Counter2/>
+      <Counter3/>
+      {/* <Counter4/> */}
+      <StateCounter />
     </div>
   );
 }
